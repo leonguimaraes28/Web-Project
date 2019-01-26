@@ -1,0 +1,407 @@
+/*Variáveis CSS*/
+    :root{
+    --red:#B23C1D;
+    --white: #fff;
+    --grey: #607074;
+    --aside:#9ca0a2;
+    --backcolor:#191919;
+    --hover:#c20003;
+    --footer:#2c2c2c;
+    --blueCheckbox:#2196F3;
+    }
+
+
+    /*Seletor * todos os elementos*/
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+    /*Definições do título principal, body e container*/
+    body{
+    font-family: sans-serif;
+    font-size: 13px;
+    }
+
+     #title{
+    color: var(--red);
+    font-family: cursive;
+    font-size: x-large;
+    margin-top: 10px;
+    position: absolute;
+    left: -23px;
+    white-space: nowrap;
+    }
+
+    .logo{
+
+    width: 200px;
+    float: left;
+    }
+
+    .logo-text{
+    display: inline-block;
+    position: relative;
+    }
+
+    .container{
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: justify;
+    }
+
+       
+        /*Sections*/
+
+    section.home{
+        background-color:var(--backcolor);
+    }
+    
+    
+
+   /*Definições do input quantidade*/   
+
+    #quantity{   
+        width: 100%;
+        max-width: 55px;
+    }
+
+
+    /*Definições do Header*/
+   
+
+    .header-container{
+    display: table;
+    width: 100%;
+    }
+
+    .menu ul{
+    padding: 0;
+    margin: 0;
+    }
+
+    .menu ul li{
+    display: inline-block;
+    padding: 100px 16px 15px 16px;
+    cursor: pointer;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    }
+
+    .menu ul li.active,
+    .menu ul li:hover{
+    background: var(--hover);
+    }
+    .menu ul li a{
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    }
+
+
+    /*Elementos da lateral*/
+    input{
+    width: calc(100% - 0px);
+    padding:3px;
+    margin-bottom: 3px;
+    }
+    .button{
+    padding: 3px 4px;
+    }
+
+    /*Definições dos elementos do main-container (article)*/
+    /*table-data, inputs, mensagem de erro do aside*/
+
+    .main-container input{
+    width: inherit;
+    }
+    td{
+    vertical-align: top;
+    }
+
+    #userPassword{
+      width: calc(100% - 52px);
+    }
+
+    .messageError {
+    padding: 20px;
+    background: #fff;
+    font-size: 20px;
+    color: red;
+    margin-top: 15px;
+    border-radius: 5px;
+    display: none;
+    }
+
+    .error{
+    width: 400px;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 0.6em;
+    font-family: "Fira Sans", Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 14px;
+    border: 2px solid #cf2a27;;
+    border-radius: 5px;
+    color:#cf2a27;
+    display:none;    
+    }
+
+    /* Article com divs para a encomenda */
+    
+    .main-container{
+    width: 65%;
+    background-color: #fff;
+    font-size:14px;
+    margin:0 auto;
+    display: inline-block;  /*alterei para block e aí as paginas ficaram independentes*/
+    vertical-align: top;
+    line-height: 2em;
+    margin:80px 0 80px 0;
+    margin-right: 40px;
+    border-style:dotted ;
+    padding:5px;
+    }
+
+.page-hidden{
+    display:none;
+    }
+
+
+/*formulario dos ingredientes*/
+
+.custom {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Esconde o checkbox por default do browser */
+  .custom input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Criar um checkbox customizado */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: lightgray;
+    border-radius:5px;
+  }
+
+  
+   .checkmark:after {
+     content: "";
+     position: absolute;
+     display: none;
+   }
+
+  .custom input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .custom input:checked ~ .checkmark {
+    background-color: var(--blueCheckbox);
+  }
+
+   /*.custom{
+        vertical-align: text-bottom;
+    }*/
+
+
+/*Ao ser selecionado*/
+  .custom .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+/*Customizar os radiobuttons*/
+
+    #page1 input[type=radio]{
+      /* Hide original inputs */
+      visibility: hidden;
+      position: absolute;
+    }
+    #page1 input[type=radio] + label:before{
+      height:12px;
+      width:12px;
+      margin-right: 2px;
+      content: " ";
+      display:inline-block;
+      vertical-align: baseline;
+      border:1px solid #777;
+    }
+    #page1 input[type=radio]:checked + label:before{
+  background:#2196F3;
+    }
+
+    /* CUSTOM RADIO AND CHECKBOX STYLES */
+    #page1 input[type=radio] + label:before{
+      border-radius:50%;
+    }
+
+    .radioNumber{
+    margin-top: 10px;
+   -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 35px;
+    }
+
+     /*Definições do aside, input para o login do user*/
+
+    aside{
+    width: 29%;
+    display: inline-block;
+    line-height: 2em;
+    margin:80px 0px 80px 0px;
+    }
+
+    #aside-div{
+    margin: 60px 40;
+    margin-bottom: 40px;
+    }
+
+    .placeItalic{
+      font-style:italic;
+    }
+
+    /*Formatação dos botões de formulários, paragrafos e ancoras*/
+
+    .form-button{
+    background-color:var(--red);
+    text-transform: uppercase;
+    padding: 8px 20px;
+    float: right;
+    margin: 0 20px 40px 0;
+    cursor: pointer;
+    } 
+
+    hr{
+    margin:10px;
+    } 
+
+    .footerHome p{
+    margin: 10px 0 20px 0;
+    min-height: 20px;
+    color:var(--grey);
+    }
+    
+    #links a {
+    color: var(--red);
+    text-decoration: none;
+    }
+
+
+    /*Títulos e subtítulos*/
+    h1{
+    color: var(--red);
+    font-weight: 100;
+    font-size: 2.8em;
+    }
+
+    h2{
+    color:var(--red);
+    font-weight: 100;
+    font-size: 2.2em;
+    margin: 20px 0 30px 5px;
+    }
+
+    /*Classes genéricas*/
+    .float-left{
+        float: left;
+    }
+    .float-right{
+        float: right;
+    }
+    .hidden{
+     display: none !important;
+    }
+    .margin{
+    margin-left:15%;
+    line-height:2.5em;
+    }
+
+
+    /*Elementos do footer*/
+
+    #bottomdiv{
+    display:flex;
+    width:100%;
+    max-width: 850px;
+    margin: 0 auto;
+    }
+
+    #links{margin: 10px;}
+
+    section.home footer{
+    background-color:var(--footer);
+    line-height:1.5em;
+    }
+
+    section.home footer #bottomdiv  {
+    display: table;
+    table-layout: fixed;
+    }
+
+    section.home footer #bottomdiv > div {
+    padding: 15px;
+    text-align: left;
+    display: table-cell;
+    width: calc(100%/3);
+    }
+
+    section.home footer #bottomdiv ul li{
+    font-size: 0.9em;
+    color:var(--grey);
+    }
+
+    section.home footer #bottomdiv ul li a:hover{
+    color:var(--hover);
+    }
+
+    section.home footer h4{
+    color:var(--white);
+    font-size: 1.4em;
+    font-weight: bold;
+    }
+
+
+    /* Elemento final*/
+    #author-div{
+    text-align:center;
+    padding: 10px 0;
+    font-size: 0.8em;
+    background: var(--backcolor);
+    color: var(--grey);
+    }
+
+
